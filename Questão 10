@@ -1,0 +1,36 @@
+def menu():
+    print('1-Horista')
+    print('2-contratado')
+    print('3- Prestador de serviço')
+    opcao = int(input('Dìgite a opção desejada:'))
+    return opcao
+def horista ():
+    valhora = float(input('Dígite o valor da hora:'))
+    qtdhoras = int(input('Dígite a quantidade de horas:'))
+    salario = valhora * qtdhoras
+    return salario
+def contratado():
+    valsal = float(input('Dígiteo salário:'))
+    return valsal
+def prestador ():
+    qtdserv = int(input('Dígite quantide de serviços:'))
+    cont = 0
+    total = 0
+    while cont < qtdserv:
+        valserv = float(input('Dígite o valor do serviço:'))
+        total += valserv
+        cont += 1
+    return total 
+    
+pessoas = 0
+while pessoas < 3:
+    op = menu()
+    if op == 1:
+        sal = horista()
+    else:
+        if op == 2:
+            sal = contratado()
+        else:
+           sal = prestador()
+    print ('Salário é', sal)
+    pessoas+= 1
