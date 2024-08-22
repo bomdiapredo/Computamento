@@ -1,0 +1,20 @@
+#2- Faça um programa que leia 10 números inteiros
+#inteiros e exiba para cada número uma mensagem
+#informando se ele é maior, igual ou menor que a
+#média dos 10 números
+numeros = []
+cont = 0
+while cont < 10:
+    
+    num = int(input('Digite um número inteiro:'))
+    numeros.append(num)    
+    cont +=1 
+media = sum(numeros)/len(numeros)
+for num1 in numeros:
+    
+    if num1 > media:
+        print(num1, 'É maior que a média')
+    elif num1 < media:
+        print(num1, 'É menor que a média')
+    else:
+        print(num1, 'está na média')     
