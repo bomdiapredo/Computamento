@@ -1,0 +1,15 @@
+#3 Faça um programa para processar 30 alunos.
+#O programa deverá ler a nota de cada aluno(numero intyeiro)
+#e cexibir a quantidade de alunos em cada nota
+#
+qtd = [0] * 11
+cont = 0
+while cont < 3:
+    nota = int(input('Digite a sua nota:'))
+    qtd[nota] += 1   
+    cont +=1 
+
+cont = 0 
+while cont < 11:
+    print("Nota", cont, "=>", qtd[cont],"Aluno(s)")
+    cont +=1
