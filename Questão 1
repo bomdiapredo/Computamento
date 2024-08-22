@@ -1,0 +1,16 @@
+#1-Faça um programa que leia 10 números inteiros
+#e exiba os números que são menos que
+#o último número lido (décimo número lido)
+numeros = []
+cont = 0
+while cont < 10:
+    
+    num = int(input('Dígite um número inteiro:'))
+    numeros.append(num)    
+    cont +=1 
+qtd = len(numeros)
+posult = qtd -1
+for val in numeros:
+    if val < numeros[posult]:
+        print(val)
+    cont += 1    
