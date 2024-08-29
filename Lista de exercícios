@@ -1,0 +1,114 @@
+    #Faça um programa que lê uma frase e exibe 
+    #o número de plavras que a fraswe contém
+    #
+frase = input('Digite uma frase:')
+lista = frase.split('')
+qtd = len(lista)
+print('Quanridade de palavras da frase é', qtd)
+
+    2. Faça um programa que leia 2 palavras e exiba se elas são ou não palíndromas mútuas, ou seja, se uma é
+    igual à outra quando lida de traz para frente.
+    Exemplo: amor e roma.
+palavra1 = input('Digite a primeira palavra:')
+palavra2 = input('Digite a segunda palavra:')
+qtd1 = len(palavra1)
+qtd2 = len(palavra2)
+palavra1 = palavra1.lower()
+palavra2 = palavra2.lower()
+
+if qtd1 == qtd2:
+    igual = 0
+    for i in range(qtd1):
+        if palavra1[i] == palavra2[qtd2 -1 -i]:
+            igual += 1
+    if qtd1 == igual:
+        print('São palíndromas mútuas')
+    else:
+        print('Não são palíndromas')
+else:
+    print('Não são palíndromas mútuas')
+
+  3.Faça uma função que receba como parâmetro um vetor de números inteiros já preenchido e retornar o
+  produto dos números
+def calculaProduto(vetor):
+    produto = 1
+    for item in vetor:
+        produto *= item
+    return produto 
+
+numeros = [1,2,3]
+prod = calculaProduto(numeros)
+print('O prduto dos números é', prod)
+    
+    4. Faça uma função que receba como parâmetro um vetor de números inteiros já preenchido e exiba a
+    quantidade de números pares e a quantidade de números ímpares.
+def parImpar(vetor):
+    par = 0 
+    impar = 0    
+    for item in vetor:
+        if item % 2 == 0:
+            par += 1
+        else:
+            impar += 1
+    print('Qunatidade de números pares é', par)
+    print('Quantidade de números ímpares', impar)              
+      
+      5. Faça uma função que receba como parâmetro um vetor de números reais já preenchido e a média dos
+      números. Esta função deverá retornar a quantidade de números acima da média dos números.
+def acimaMedia (vetor, media):
+    acima = 0
+    for item in vetor:
+        if item > media:
+            acima += 1
+    return acima 
+#######################
+def acimaMedia (vetor,media):
+    acima = 0
+    qtd = len(vetor)
+    cont = 0
+    while cont < qtd:
+        if vetor[cont] > media:
+            acima += 1
+    return acima        
+      6. Faça um programa, utilizando a função abaixo, para processar os 500 funcionários de uma empresa. Para
+      cada funcionário, o programa deverá ler o código do departamento no qual ele trabalha (número inteiro de
+      1 a 10) e o salário. O programa deverá exibir o maior salário de cada departamento. Faça a função exibe que
+      recebe como parâmetro um vetor de números reais já preenchido e exibe o maior salário de cada
+      departamento.
+def exibe (vetor):
+    cont = 0
+    while cont < 10:
+        print('Depto', cont+1, ':', vetor[cont])
+        cont += 1
+
+maior = [0] * 10
+cont = 0
+while cont < 5:
+    cod = int(input('Digite código de 1 a 10:'))
+    sal = float(input('Digite salário:'))
+    if sal > maior[cod - 1]:
+        maior [cod - 1] = sal
+    cont += 1
+exibe(maior)
+          7. Faça um programa, utilizando a função abaixo, para processar os 1000 funcionários de uma empresa. Para
+          cada funcionário, o programa deverá ler a matrícula, o código do departamento no qual ele trabalha
+          (número inteiro de 10 a 20) e a idade. O programa deverá exibir a idade média dos funcionários de cada
+          departamento.
+somaid = [0] * 11
+qtd = [0] * 11
+cont = 0
+while cont < 1000:
+    matr = input('Digite a matrícula:')
+    cod = int(input('Digite o código de 10 a 20:'))
+    idade = int(input('Digite a idade:'))
+    somaid[cod - 10] += 1
+    cont += 1
+
+i = 0
+while i < 11:
+    if qtd [i] != 0:
+        idmd = somaid[i] / qtd [i]
+    else:
+        idmd = 0
+    print('Departamento', i+10, ':', idmd)
+    i += 1           
